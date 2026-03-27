@@ -1,6 +1,6 @@
 Portfolio
 
-A modern and responsive personal portfolio website built using **React.js** and **CSS**.
+A personal portfolio website built using **React.js** and **CSS**.
 This portfolio showcases my skills, projects, and internship experience.
 
  Features
