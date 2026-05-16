@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sharan-zona.github.io/portfolio",
+  "homepage": "https://sharan-zona.github.io/sharanzona/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
