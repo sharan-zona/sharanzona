@@ -1,0 +1,67 @@
+/* --- PROJECTS SECTION --- */
+.projects {
+  min-height: 100vh;
+  padding: 00px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.projects h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.projects-container,
+.internship-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.project-card {
+  padding: 25px;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgb(184, 140, 109);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(246, 96, 96, 0.947);
+}
+
+.buttons a {
+  width: 100%;
+  text-align: center;
+}
+
+/* --- MOBILE FIX --- */
+@media (max-width: 768px) {
+  .projects-container,
+  .internship-container {
+    flex-direction: column;       /* stack cards vertically */
+    align-items: center;          /* center cards */
+    gap: 15px;                    /* reduce gap for small screens */
+    width: 80%;                  /* use full width */
+    padding: 0 10px;              /* prevent overflow */
+    box-sizing: border-box;       /* include padding in width */
+  }
+
+  .project-card {
+    max-width: 80%;              /* make card fit screen width */
+  }
+
+  .projects h1 {
+    font-size: 32px;              /* scale title down */
+  }
+
+  .buttons a {
+    text-align: center;           /* keep button centered */
+  }
+}

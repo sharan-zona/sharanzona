@@ -1,0 +1,47 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;              /* ADD THIS */
+  height: 60px;
+  background: #191e32d0;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 40px;       /* better spacing */
+  box-sizing: border-box;
+
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ebe6ee;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #f5a462;
+}
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: nowrap;           /* prevent breaking into 2 lines */
+    overflow-x: auto;            /* allow horizontal scroll */
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;           /* keep links in one row */
+  }
+
+  .nav-links a {
+    white-space: nowrap;         /* prevent text from breaking */
+  }
+}
