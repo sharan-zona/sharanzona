@@ -1,6 +1,7 @@
 import profile from "../assets/sharannn.png"
 import "../styles/About.css"
 
+
 function About() {
 
 const handleResumeClick = () => {
