@@ -1,4 +1,4 @@
-import profile from "../assets/sharanzona.jpg"
+import profile from "../assets/sharannn.png"
 import "../styles/About.css"
 
 function About() {
