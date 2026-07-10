@@ -1,4 +1,4 @@
-import profile from "../assets/sharannn.png"
+import profile from "../assets/profile.jpg"
 import "../styles/About.css"
 
 
