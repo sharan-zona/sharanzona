@@ -1,38 +1,14 @@
+import Marquee from "./Marquee";
 import "../styles/Skills.css";
 
-function Skills() {
+export default function Skills() {
   return (
-    <section id="skills" className="skills">
+    <section id="skills" className="section skills-section">
+      <p className="section-label">Skills</p>
 
-      <h1>Skills:</h1>   {/* 👈 moved OUTSIDE */}
+      <Marquee />
 
-      <div className="skills-container">
-        
-        <div className="skills-card">
-          <h2>Technical Skills:</h2>
-          <ul>
-            <li>HTML | CSS</li>
-            <li>Javascript</li>
-            <li>ReactJs</li>
-            <li>Python</li>
-            <li>C</li>
-          </ul>
-        </div>
-
-        <div className="skills-card">
-          <h2>Soft Skills:</h2>
-          <ul>
-            <li>Leadership</li>
-            <li>Self Learner</li>
-            <li>Communication</li>
-            <li>Practical thinking</li>
-            <li>Time Management</li>
-          </ul>
-        </div>
-
-      </div>
+      <Marquee reverse />
     </section>
   );
 }
-
-export default Skills;

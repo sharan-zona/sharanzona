@@ -1,59 +1,78 @@
-/* ---------------- CONTACT SECTION ---------------- */
-.contact {
-  min-height: 50vh;
-  padding: 80px 20px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-}
-
-/* INNER CONTENT */
-.contact-content {
-  max-width: 600px;
-  width: 100%;
-}
-
-/* HEADING */
 .contact h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  color: #fefefe;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 18px;
 }
 
-/* TEXT */
-.contact p {
-  margin: 10px 0;
-  font-size: 18px;
-  color: #f6f1f1;
+.contact-description {
+  margin: 0 auto 40px;
+  line-height: 1.8;
+  color: rgba(243, 236, 223, 0.8);
+  font-size: 1rem;
 }
 
-/* LINKS */
-.contact a {
-  color: #f5b98e;
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 5px;
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 40px;
 }
 
-.contact a:hover {
-  color: rgb(49, 143, 226);
+.contact-item {
+  display: flex;
+  gap: 12px;
+  font-size: 1rem;
 }
 
-/* ---------------- MOBILE ---------------- */
-@media (max-width: 480px) {
+.contact-item svg {
+  color: var(--mint);
+  font-size: 1.2rem;
+}
 
-  .contact {
-    padding: 60px 15px;
-  }
+.contact-item a,
+.contact-item span {
+  color: var(--cream);
+  transition: 0.3s;
+}
 
-  .contact h2 {
-    font-size: 1.8rem;
-  }
+.contact-item a:hover {
+  color: var(--mint);
+}
 
-  .contact p {
-    font-size: 16px;
-  }
+.contact-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+
+.footer-note {
+  text-align: center;
+  opacity: 0.55;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+@media(max-width:768px){
+
+.certs{
+    grid-template-columns:1fr;
+}
+
+.cert-image{
+    height:180px;
+}
+
+}
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
 }

@@ -1,53 +1,70 @@
+import { FiArrowUpRight } from "react-icons/fi";
+import { PROJECTS } from "../data/Data";
 import "../styles/Projects.css";
 
-function Projects() {
+export default function Projects() {
   return (
-    <section id="projects" className="projects">
-      <h1>Projects:</h1>
-      {/* Projects Section */}
-      <div className="projects-container">
-        <div className="project-card">
-          <h2>Simple Calculator</h2>
-          <p className="type">Python</p>
-          <p className="tools"></p>
-          <p className="desc">
-          A Simple Calculator that is build using Python.
-          </p>
-          <div className="buttons">
-            <a href="https://github.com/sharan-zona/calc">GitHub</a>
-          </div>
+    <section id="work" className="section">
+      <p className="section-label">Experience</p>
+
+      {/* Internship */}
+      <div className="internship-card">
+        <div className="project-top">
+          <span className="project-n">Internship</span>
         </div>
 
-        <div className="project-card">
-          <h2>Portfolio</h2>
-          <p className="type">Frontend</p>
-          <p className="tools">React, CSS</p>
-          <p className="desc">
-            Personal portfolio website showcasing projects and skills.
-          </p>
-          <div className="buttons">
-            <a href="https://sharan-zona.github.io/sharanzona/#">Live</a>
-            <a href="https://github.com/sharan-zona/sharanzona">GitHub</a>
-          </div>
+        <h3>Web Developer Intern</h3>
+
+        <h4 className="company-name">
+          Shadobooks Pvt. Ltd.
+        </h4>
+
+        <p>
+          Completed a Web Development Internship where I gained practical
+          experience in building responsive websites and modern user
+          interfaces. Worked with HTML, CSS and JavaScript while
+          collaborating on real-world development tasks and improving my
+          problem-solving and teamwork skills.
+        </p>
+
+        <div className="project-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>GitHub</span>
         </div>
       </div>
- <h1 id="intern">Internship:</h1>
-      {/* Internship Section */}
-      <div className="internship-container">
-        <div className="project-card">
-          <h2>Web Developer</h2>
-          <p className="type">
-            <a href="https://shadobooks.com/">@SHADOBOOKS PVT. LTD</a>
-          </p>
-          <p className="tools">Located at Marthandam</p>
-          <p className="desc">
-            During my internship at Shadobooks Pvt Ltd, I worked on web application
-            development with a focus on building responsive and user-friendly interfaces.
-          </p>
-        </div>
+
+      <p className="section-label" style={{ marginTop: "60px" }}>
+        Projects
+      </p>
+
+      <div className="projects">
+        {PROJECTS.map((project) => (
+          <a
+            key={project.n}
+            href={project.link}
+            className="project-card"
+            target={project.link !== "#" ? "_blank" : "_self"}
+            rel="noreferrer"
+          >
+            <div className="project-top">
+              <span className="project-n">{project.n}</span>
+              <FiArrowUpRight className="project-arrow" />
+            </div>
+
+            <h3>{project.name}</h3>
+
+            <p>{project.desc}</p>
+
+            <div className="project-stack">
+              {project.stack.map((tech) => (
+                <span key={tech}>{tech}</span>
+              ))}
+            </div>
+          </a>
+        ))}
       </div>
     </section>
   );
 }
-
-export default Projects;

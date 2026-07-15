@@ -1,39 +1,61 @@
-import profile from "../assets/profile1.jpg"
-import "../styles/About.css"
+import "../styles/About.css";
 
-
-function About() {
-
-const handleResumeClick = () => {
-  window.open(`${import.meta.env.BASE_URL}Resume.pdf`, "_blank");
-};
-
+export default function About() {
   return (
-    <section id="about" className="about">
+    <section id="about" className="section about">
+      <p className="section-label">About</p>
 
-      <div className="about-container">
-        <div className="about-image">
-          <img src={profile} alt="profile" />
-        </div>
+      <div className="about-intro">
+        <h2>Who Am I?</h2>
 
-        <div className="about-content">
-          <h1>Hi, I'm Sharan Zona</h1>
-          <h3>Final year student.</h3>
-          <h4>Junior Web Developer</h4>
-          <p>
-            Currently i'm pursuing my Btech degree from St.Xavier's Catholic College of Engineering.
-             At the Dept. of Information technology.
-          </p>
-
-          <button id="resume-btn" onClick={handleResumeClick}>
-            View My Resume
-          </button>
-
-        </div>
+        <p>
+          I'm <b>Sharan Zona</b>. Currently pursuing a B.Tech in
+          Information Technology(Final-Year) at 
+          St.Xavier's Catholic College of Engineering,
+          with a strong interest in 
+          Full-Stack web development. 
+          I enjoy building user-friendly web applications 
+          using HTML, CSS, JavaScript, and React.
+          I'm eager to learn, improve my skills,
+          and contribute to a team while growing as a 
+          Software engineer.
+        </p>
       </div>
 
-    </section>
-  )
-}
+      <h2 className="education-title">Education</h2>
 
-export default About
+      <div className="timeline">
+        <div className="timeline-item">
+          <div className="timeline-dot"></div>
+
+          <div className="timeline-content">
+            <h3>B.Tech - Information Technology</h3>
+            <h4>St. Xavier's Catholic College of Engineering</h4>
+            <span>2023 - Present</span>
+            <p>CGPA : 7.8</p>
+          </div>
+        </div>
+
+        <div className="timeline-item">
+          <div className="timeline-dot"></div>
+
+          <div className="timeline-content">
+            <h3>Higher Secondary (HSC)</h3>
+            <h4>Little Flower Girl's Higher Secondary School</h4>
+            <span>2021 - 2023</span>
+          </div>
+        </div>
+
+        <div className="timeline-item">
+          <div className="timeline-dot"></div>
+
+          <div className="timeline-content">
+            <h3>SSLC</h3>
+            <h4>Hebron Matriculation Higher Secondary School</h4>
+            <span>2020 - 2021</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

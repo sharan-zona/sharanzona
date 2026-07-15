@@ -1,29 +1,69 @@
+import {
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+  FiMapPin,
+  FiPhone,
+} from "react-icons/fi";
+
+import {
+  NAME,
+  EMAIL,
+  GITHUB_URL,
+  LINKEDIN_URL,
+} from "../data/Data";
+
 import "../styles/Contact.css";
 
-function Contact() {
+export default function Contact() {
   return (
-    <section id="contact"className="contact">
-      <div className="contact-content">
-        <h2>Contact Me</h2>
+    <footer id="contact" className="section contact">
+      <p className="section-label">Contact</p>
 
-        <p>Email: 
-            sharanzona@gmail.com
-        </p>
+      <h3>Let's Connect</h3>
 
-        <p>GitHub: 
-          <a href="https://github.com/sharan-zona" target="_blank" rel="noreferrer">
-            sharan-zona
+      <p className="contact-description">
+        I'm currently looking for internship and full-time opportunities in
+        software development. <br />
+        <b>Thank you </b>for visiting my portfolio.
+      </p>
+
+      <div className="contact-info">
+        <div className="contact-item">
+          <FiMail />
+          <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+        </div>
+
+        <div className="contact-item">
+          <FiLinkedin />
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
           </a>
-        </p>
+        </div>
 
-        <p>LinkedIn: 
-          <a href="https://www.linkedin.com/in/sharan-zona-i" target="_blank" rel="noreferrer">
-           Sharan Zona I
+        <div className="contact-item">
+          <FiGithub />
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
           </a>
-        </p>
+        </div>
+
+        <div className="contact-item">
+          <FiMapPin />
+          <span>Tamil Nadu, India</span>
+        </div>
       </div>
-    </section>
+      <p className="footer-note">
+        © {new Date().getFullYear()} {NAME}. All Rights Reserved.
+      </p>
+    </footer>
   );
 }
-
-export default Contact;
